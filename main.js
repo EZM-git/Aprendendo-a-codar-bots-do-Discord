@@ -18,6 +18,15 @@ client.on('messageCreate', (message) => {
     if (message.content.startsWith(prefix + "ping")) {
         message.reply("Pong!");
     }
-})
+});
 
-client.login("");
+client.on('ready', () => { // Printar no terminal que foi ligado
+    console.log(`Logged in as ${client.user.tag}`)
+});
+
+client.on('messageCreate', (message) => { // Printar as mensagens e seus respectivos remetentes no terminal
+    console.log(`Mensagem recebida: ${message.content} de ${message.author.tag}`)
+});
+
+
+client.login(""); // Token
