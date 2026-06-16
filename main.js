@@ -1,6 +1,7 @@
 const { Client, GatewayIntentBits, Collection } = require('discord.js'); // Para importar 
 
-// Evento == Intent
+// Intent = permissão para receber eventos
+// Evento = algo que aconteceu
 
 const client = new Client({
     intents: [
@@ -28,5 +29,6 @@ client.on('messageCreate', (message) => { // Printar as mensagens e seus respect
     console.log(`Mensagem recebida: ${message.content} de ${message.author.tag}`)
 });
 
-
+// Ligar Bot -> node .
+// Desligar Bot -> Ctrl + C
 client.login(""); // Token
